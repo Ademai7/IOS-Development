@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vc-profile">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s-profile">
+            <objects>
+                <viewController id="vc-profile" customClass="ViewController" customModule="AutoLayoutProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="root">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avatar" userLabel="Avatar — 96x96">
+                                <rect key="frame" x="172" y="148" width="96" height="96"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ProfileAvatarCircle" translatesAutoresizingMaskIntoConstraints="NO" id="avatar-circle" userLabel="Circular Avatar Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AB" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="initials">
+                                        <rect key="frame" x="23.666666666666657" y="26.666666666666657" width="49" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.21568599999999999" green="0.19215699999999999" blue="0.64705900000000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="avatar-circle" firstAttribute="bottom" secondItem="avatar" secondAttribute="bottom" id="avatar-circle-bottom"/>
+                                    <constraint firstItem="avatar-circle" firstAttribute="leading" secondItem="avatar" secondAttribute="leading" id="avatar-circle-leading"/>
+                                    <constraint firstItem="avatar-circle" firstAttribute="top" secondItem="avatar" secondAttribute="top" id="avatar-circle-top"/>
+                                    <constraint firstItem="avatar-circle" firstAttribute="trailing" secondItem="avatar" secondAttribute="trailing" id="avatar-circle-trailing"/>
+                                    <constraint firstAttribute="width" constant="96" id="c-0001"/>
+                                    <constraint firstAttribute="height" constant="96" id="c-0002"/>
+                                    <constraint firstItem="initials" firstAttribute="centerX" secondItem="avatar" secondAttribute="centerX" id="c-0003"/>
+                                    <constraint firstItem="initials" firstAttribute="centerY" secondItem="avatar" secondAttribute="centerY" id="c-0004"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="48"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aigerim Bekova" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="profile-name">
+                                <rect key="frame" x="16" y="262" width="408" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.098039000000000001" green="0.098039000000000001" blue="0.109804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Developer · Almaty" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="profile-role">
+                                <rect key="frame" x="16" y="299.33333333333331" width="408" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.43529400000000001" green="0.43529400000000001" blue="0.45882400000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stats-card" userLabel="Statistics — 3 Equal Columns">
+                                <rect key="frame" x="16" y="342.66666666666669" width="408" height="82"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="col-1" userLabel="Stat 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="128" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stat-1-value">
+                                                <rect key="frame" x="47.666666666666671" y="14.000000000000002" width="40.666666666666671" height="27.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <color key="textColor" red="0.11372500000000001" green="0.11372500000000001" blue="0.12548999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stat-1-caption">
+                                                <rect key="frame" x="50" y="42.666666666666629" width="36" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.43529400000000001" green="0.43529400000000001" blue="0.45882400000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="stat-1-value" firstAttribute="centerX" secondItem="col-1" secondAttribute="centerX" id="c-0005"/>
+                                            <constraint firstItem="stat-1-value" firstAttribute="top" secondItem="col-1" secondAttribute="top" constant="14" id="c-0006"/>
+                                            <constraint firstItem="stat-1-value" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="col-1" secondAttribute="leading" constant="6" id="c-0007"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="stat-1-value" secondAttribute="trailing" constant="6" id="c-0008"/>
+                                            <constraint firstItem="stat-1-caption" firstAttribute="centerX" secondItem="col-1" secondAttribute="centerX" id="c-0009"/>
+                                            <constraint firstItem="stat-1-caption" firstAttribute="top" secondItem="stat-1-value" secondAttribute="bottom" constant="1" id="c-0010"/>
+                                            <constraint firstItem="stat-1-caption" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="col-1" secondAttribute="leading" constant="6" id="c-0011"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="stat-1-caption" secondAttribute="trailing" constant="6" id="c-0012"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="stat-1-caption" secondAttribute="bottom" constant="10" id="c-0013"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="col-2" userLabel="Stat 2">
+                                        <rect key="frame" x="136" y="0.0" width="136" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2K" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stat-2-value">
+                                                <rect key="frame" x="42.666666666666657" y="14.000000000000002" width="50.666666666666657" height="27.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <color key="textColor" red="0.11372500000000001" green="0.11372500000000001" blue="0.12548999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stat-2-caption">
+                                                <rect key="frame" x="37.333333333333343" y="42.666666666666629" width="61.333333333333343" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.43529400000000001" green="0.43529400000000001" blue="0.45882400000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="stat-2-value" firstAttribute="centerX" secondItem="col-2" secondAttribute="centerX" id="c-0014"/>
+                                            <constraint firstItem="stat-2-value" firstAttribute="top" secondItem="col-2" secondAttribute="top" constant="14" id="c-0015"/>
+                                            <constraint firstItem="stat-2-value" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="col-2" secondAttribute="leading" constant="6" id="c-0016"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="stat-2-value" secondAttribute="trailing" constant="6" id="c-0017"/>
+                                            <constraint firstItem="stat-2-caption" firstAttribute="centerX" secondItem="col-2" secondAttribute="centerX" id="c-0018"/>
+                                            <constraint firstItem="stat-2-caption" firstAttribute="top" secondItem="stat-2-value" secondAttribute="bottom" constant="1" id="c-0019"/>
+                                            <constraint firstItem="stat-2-caption" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="col-2" secondAttribute="leading" constant="6" id="c-0020"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="stat-2-caption" secondAttribute="trailing" constant="6" id="c-0021"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="stat-2-caption" secondAttribute="bottom" constant="10" id="c-0022"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="col-3" userLabel="Stat 3">
+                                        <rect key="frame" x="272" y="0.0" width="136" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="312" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stat-3-value">
+                                                <rect key="frame" x="48" y="14.000000000000002" width="40" height="27.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <color key="textColor" red="0.11372500000000001" green="0.11372500000000001" blue="0.12548999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stat-3-caption">
+                                                <rect key="frame" x="37.333333333333314" y="42.666666666666629" width="61.333333333333343" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.43529400000000001" green="0.43529400000000001" blue="0.45882400000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="stat-3-value" firstAttribute="centerX" secondItem="col-3" secondAttribute="centerX" id="c-0023"/>
+                                            <constraint firstItem="stat-3-value" firstAttribute="top" secondItem="col-3" secondAttribute="top" constant="14" id="c-0024"/>
+                                            <constraint firstItem="stat-3-value" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="col-3" secondAttribute="leading" constant="6" id="c-0025"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="stat-3-value" secondAttribute="trailing" constant="6" id="c-0026"/>
+                                            <constraint firstItem="stat-3-caption" firstAttribute="centerX" secondItem="col-3" secondAttribute="centerX" id="c-0027"/>
+                                            <constraint firstItem="stat-3-caption" firstAttribute="top" secondItem="stat-3-value" secondAttribute="bottom" constant="1" id="c-0028"/>
+                                            <constraint firstItem="stat-3-caption" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="col-3" secondAttribute="leading" constant="6" id="c-0029"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="stat-3-caption" secondAttribute="trailing" constant="6" id="c-0030"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="stat-3-caption" secondAttribute="bottom" constant="10" id="c-0031"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="separator-1" userLabel="Divider 1">
+                                        <rect key="frame" x="135.66666666666666" y="20" width="1" height="42"/>
+                                        <color key="backgroundColor" red="0.88235300000000005" green="0.88235300000000005" blue="0.91372500000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="c-0046"/>
+                                            <constraint firstAttribute="height" constant="42" id="c-0047"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="separator-2" userLabel="Divider 2">
+                                        <rect key="frame" x="271.66666666666669" y="20" width="1" height="42"/>
+                                        <color key="backgroundColor" red="0.88235300000000005" green="0.88235300000000005" blue="0.91372500000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="c-0050"/>
+                                            <constraint firstAttribute="height" constant="42" id="c-0051"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="col-1" firstAttribute="top" secondItem="stats-card" secondAttribute="top" id="c-0032"/>
+                                    <constraint firstItem="col-1" firstAttribute="bottom" secondItem="stats-card" secondAttribute="bottom" id="c-0033"/>
+                                    <constraint firstItem="col-2" firstAttribute="top" secondItem="stats-card" secondAttribute="top" id="c-0034"/>
+                                    <constraint firstItem="col-2" firstAttribute="bottom" secondItem="stats-card" secondAttribute="bottom" id="c-0035"/>
+                                    <constraint firstItem="col-3" firstAttribute="top" secondItem="stats-card" secondAttribute="top" id="c-0036"/>
+                                    <constraint firstItem="col-3" firstAttribute="bottom" secondItem="stats-card" secondAttribute="bottom" id="c-0037"/>
+                                    <constraint firstItem="col-1" firstAttribute="leading" secondItem="stats-card" secondAttribute="leading" id="c-0038"/>
+                                    <constraint firstItem="col-2" firstAttribute="leading" secondItem="col-1" secondAttribute="trailing" id="c-0039"/>
+                                    <constraint firstItem="col-3" firstAttribute="leading" secondItem="col-2" secondAttribute="trailing" id="c-0040"/>
+                                    <constraint firstAttribute="trailing" secondItem="col-3" secondAttribute="trailing" id="c-0041"/>
+                                    <constraint firstItem="col-1" firstAttribute="width" secondItem="col-2" secondAttribute="width" id="c-0042"/>
+                                    <constraint firstItem="col-2" firstAttribute="width" secondItem="col-3" secondAttribute="width" id="c-0043"/>
+                                    <constraint firstItem="separator-1" firstAttribute="centerX" secondItem="col-1" secondAttribute="trailing" id="c-0044"/>
+                                    <constraint firstItem="separator-1" firstAttribute="centerY" secondItem="stats-card" secondAttribute="centerY" id="c-0045"/>
+                                    <constraint firstItem="separator-2" firstAttribute="centerX" secondItem="col-2" secondAttribute="trailing" id="c-0048"/>
+                                    <constraint firstItem="separator-2" firstAttribute="centerY" secondItem="stats-card" secondAttribute="centerY" id="c-0049"/>
+                                    <constraint firstAttribute="height" constant="82" id="c-0070"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="follow-button">
+                                <rect key="frame" x="16" y="440.66666666666669" width="198" height="48"/>
+                                <color key="backgroundColor" red="0.21568599999999999" green="0.18823500000000001" blue="0.64705900000000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="c-0076"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Follow">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="message-button">
+                                <rect key="frame" x="226" y="440.66666666666669" width="198" height="48"/>
+                                <color key="backgroundColor" red="0.91372500000000001" green="0.90588199999999997" blue="0.99215699999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="c-0077"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Message">
+                                    <color key="titleColor" red="0.19215699999999999" green="0.18431400000000001" blue="0.56470600000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="about-card" userLabel="About">
+                                <rect key="frame" x="16" y="512.66666666666663" width="408" height="118.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="about-title">
+                                        <rect key="frame" x="16.000000000000004" y="16" width="50.333333333333343" height="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="0.43529400000000001" green="0.43529400000000001" blue="0.45882400000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building banking apps in Swift. I like clean architecture, coffee and long walks in the mountains around Almaty." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="about-text">
+                                        <rect key="frame" x="16" y="43" width="376" height="57.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.13333300000000001" green="0.13333300000000001" blue="0.14902000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="about-title" firstAttribute="top" secondItem="about-card" secondAttribute="top" constant="16" id="c-0052"/>
+                                    <constraint firstItem="about-title" firstAttribute="leading" secondItem="about-card" secondAttribute="leading" constant="16" id="c-0053"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="about-title" secondAttribute="trailing" constant="16" id="c-0054"/>
+                                    <constraint firstItem="about-text" firstAttribute="top" secondItem="about-title" secondAttribute="bottom" constant="10" id="c-0055"/>
+                                    <constraint firstItem="about-text" firstAttribute="leading" secondItem="about-card" secondAttribute="leading" constant="16" id="c-0056"/>
+                                    <constraint firstAttribute="trailing" secondItem="about-text" secondAttribute="trailing" constant="16" id="c-0057"/>
+                                    <constraint firstAttribute="bottom" secondItem="about-text" secondAttribute="bottom" constant="18" id="c-0058"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="safe"/>
+                        <color key="backgroundColor" red="0.95294100000000004" green="0.94901999999999997" blue="0.972549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="avatar" firstAttribute="top" secondItem="safe" secondAttribute="top" constant="24" id="c-0059"/>
+                            <constraint firstItem="avatar" firstAttribute="centerX" secondItem="safe" secondAttribute="centerX" id="c-0060"/>
+                            <constraint firstItem="profile-name" firstAttribute="top" secondItem="avatar" secondAttribute="bottom" constant="18" id="c-0061"/>
+                            <constraint firstItem="profile-name" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="c-0062"/>
+                            <constraint firstItem="safe" firstAttribute="trailing" secondItem="profile-name" secondAttribute="trailing" constant="16" id="c-0063"/>
+                            <constraint firstItem="profile-role" firstAttribute="top" secondItem="profile-name" secondAttribute="bottom" constant="6" id="c-0064"/>
+                            <constraint firstItem="profile-role" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="c-0065"/>
+                            <constraint firstItem="safe" firstAttribute="trailing" secondItem="profile-role" secondAttribute="trailing" constant="16" id="c-0066"/>
+                            <constraint firstItem="stats-card" firstAttribute="top" secondItem="profile-role" secondAttribute="bottom" constant="24" id="c-0067"/>
+                            <constraint firstItem="stats-card" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="c-0068"/>
+                            <constraint firstItem="safe" firstAttribute="trailing" secondItem="stats-card" secondAttribute="trailing" constant="16" id="c-0069"/>
+                            <constraint firstItem="follow-button" firstAttribute="top" secondItem="stats-card" secondAttribute="bottom" constant="16" id="c-0071"/>
+                            <constraint firstItem="message-button" firstAttribute="top" secondItem="follow-button" secondAttribute="top" id="c-0072"/>
+                            <constraint firstItem="follow-button" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="c-0073"/>
+                            <constraint firstItem="message-button" firstAttribute="leading" secondItem="follow-button" secondAttribute="trailing" constant="12" id="c-0074"/>
+                            <constraint firstItem="safe" firstAttribute="trailing" secondItem="message-button" secondAttribute="trailing" constant="16" id="c-0075"/>
+                            <constraint firstItem="follow-button" firstAttribute="width" secondItem="message-button" secondAttribute="width" id="c-0078"/>
+                            <constraint firstItem="about-card" firstAttribute="top" secondItem="follow-button" secondAttribute="bottom" constant="24" id="c-0079"/>
+                            <constraint firstItem="about-card" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="c-0080"/>
+                            <constraint firstItem="safe" firstAttribute="trailing" secondItem="about-card" secondAttribute="trailing" constant="16" id="c-0081"/>
+                            <constraint firstItem="safe" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="about-card" secondAttribute="bottom" constant="12" id="c-0082"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="first-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ProfileAvatarCircle" width="96" height="96"/>
+    </resources>
+</document>
