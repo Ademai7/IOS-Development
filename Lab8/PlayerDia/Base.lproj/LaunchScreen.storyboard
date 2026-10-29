@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="launchVC">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="launchScene">
+            <objects>
+                <viewController id="launchVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="launchRoot">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="♫" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="launchWhite" userLabel="White Note">
+                                <rect key="frame" x="132" y="402" width="160" height="120"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="109"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="white-width"/>
+                                    <constraint firstAttribute="height" constant="120" id="white-height"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="♫" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="launchPink" userLabel="Pink Note">
+                                <rect key="frame" x="135" y="406" width="160" height="120"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="109"/>
+                                <color key="textColor" red="0.87843137250000003" green="0.25295963118995546" blue="0.46140042354075689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="pink-width"/>
+                                    <constraint firstAttribute="height" constant="120" id="pink-height"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="launchSafe"/>
+                        <color key="backgroundColor" red="0.7890625" green="0.580078125" blue="0.6884765625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="launchWhite" firstAttribute="centerX" secondItem="launchRoot" secondAttribute="centerX" constant="-3" id="white-centerX"/>
+                            <constraint firstItem="launchWhite" firstAttribute="centerY" secondItem="launchRoot" secondAttribute="centerY" constant="-4" id="white-centerY"/>
+                            <constraint firstItem="launchPink" firstAttribute="centerX" secondItem="launchRoot" secondAttribute="centerX" id="pink-centerX"/>
+                            <constraint firstItem="launchPink" firstAttribute="centerY" secondItem="launchRoot" secondAttribute="centerY" id="pink-centerY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="launchResponder" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

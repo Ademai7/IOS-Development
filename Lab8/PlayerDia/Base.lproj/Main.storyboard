@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="controller-1">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="scene-1">
+            <objects>
+                <viewController id="controller-1" customClass="ViewController" customModule="PlayerDia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="root">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="BackgroundNervous" translatesAutoresizingMaskIntoConstraints="NO" id="background">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="rootStack">
+                                <rect key="frame" x="20" y="198" width="390" height="536"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="CoverNervous" translatesAutoresizingMaskIntoConstraints="NO" id="album">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="390"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="album" secondAttribute="width" id="cover-square"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="labelsStack">
+                                        <rect key="frame" x="0.0" y="408" width="390" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nervous" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="title">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Neighbourhood" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="artist">
+                                                <rect key="frame" x="0.0" y="37" width="390" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.82" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="controlsStack">
+                                        <rect key="frame" x="0.0" y="487" width="390" height="49"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="previous">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="49"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="◀"/>
+                                                <connections>
+                                                    <action selector="previousDidTap:" destination="controller-1" eventType="touchUpInside" id="action-previous"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="playpause">
+                                                <rect key="frame" x="139.33333333333334" y="0.0" width="111.33333333333331" height="49"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="▶"/>
+                                                <connections>
+                                                    <action selector="playPauseDidTap:" destination="controller-1" eventType="touchUpInside" id="action-playpause"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="next">
+                                                <rect key="frame" x="278.66666666666669" y="0.0" width="111.33333333333331" height="49"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="▶"/>
+                                                <connections>
+                                                    <action selector="nextDidTap:" destination="controller-1" eventType="touchUpInside" id="action-next"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="safe"/>
+                        <color key="backgroundColor" red="0.7890625" green="0.580078125" blue="0.6884765625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="background" firstAttribute="top" secondItem="root" secondAttribute="top" id="bg-top"/>
+                            <constraint firstItem="background" firstAttribute="bottom" secondItem="root" secondAttribute="bottom" id="bg-bottom"/>
+                            <constraint firstItem="background" firstAttribute="leading" secondItem="root" secondAttribute="leading" id="bg-leading"/>
+                            <constraint firstItem="background" firstAttribute="trailing" secondItem="root" secondAttribute="trailing" id="bg-trailing"/>
+                            <constraint firstItem="rootStack" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="20" id="root-leading"/>
+                            <constraint firstItem="safe" firstAttribute="trailing" secondItem="rootStack" secondAttribute="trailing" constant="20" id="root-trailing"/>
+                            <constraint firstItem="rootStack" firstAttribute="centerY" secondItem="safe" secondAttribute="centerY" id="root-centerY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="artist" id="outlet-artistLabel"/>
+                        <outlet property="backgroundImageView" destination="background" id="outlet-backgroundImageView"/>
+                        <outlet property="coverImageView" destination="album" id="outlet-coverImageView"/>
+                        <outlet property="nextButton" destination="next" id="outlet-nextButton"/>
+                        <outlet property="playPauseButton" destination="playpause" id="outlet-playPauseButton"/>
+                        <outlet property="previousButton" destination="previous" id="outlet-previousButton"/>
+                        <outlet property="titleLabel" destination="title" id="outlet-titleLabel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="first" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackgroundNervous" width="540" height="1080"/>
+        <image name="CoverNervous" width="800" height="800"/>
+    </resources>
+</document>
